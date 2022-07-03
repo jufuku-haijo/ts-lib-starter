@@ -1,0 +1,42 @@
+{
+  "name": "ts-lib-starter",
+  "version": "0.0.0",
+  "author": "nemurubaka",
+  "private": true,
+  "description": "",
+  "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/cijiugechu/str-process",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cijiugechu/str-process.git"
+  },
+  "bugs": "https://github.com/cijiugechu/str-process/issues",
+  "scripts": {
+    "build-fast": "tsup src/index.ts --format cjs,esm --dts",
+    "build": "pnpm run build-fast -- --dts-resolve",
+    "test": "vitest",
+    "test:watch": "vitest -w",
+    "prepublishOnly": "pnpm run build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@egoist/prettier-config": "^1.0.0",
+    "prettier": "^2.7.1",
+    "tsup": "^6.1.2",
+    "typescript": "^4.7.4",
+    "vitest": "^0.16.0"
+  }
+}
