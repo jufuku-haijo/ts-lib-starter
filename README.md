@@ -3,7 +3,7 @@
 ## Using this template
 
 - Search `ts-lib-starter` and replace it with your custom package name.
-- Search `egoist` and replace it with your name.
+- Search `nemurubaka` and replace it with your name.
 
 ## License
 
