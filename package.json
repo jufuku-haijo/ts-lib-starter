@@ -18,12 +18,12 @@
     "import": "./dist/index.mjs"
   },
   "types": "./dist/index.d.ts",
-  "homepage": "https://github.com/cijiugechu/str-process",
+  "homepage": "https://github.com/jufuku-haijo/ts-lib-starter",
   "repository": {
     "type": "git",
-    "url": "git@github.com:cijiugechu/str-process.git"
+    "url": "git@github.com:jufuku-haijo/ts-lib-starter.git"
   },
-  "bugs": "https://github.com/cijiugechu/str-process/issues",
+  "bugs": "https://github.com/jufuku-haijo/ts-lib-starter/issues",
   "scripts": {
     "build-fast": "tsup src/index.ts --format cjs,esm --dts",
     "build": "pnpm run build-fast -- --dts-resolve",
