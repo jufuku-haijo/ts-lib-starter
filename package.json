@@ -26,6 +26,7 @@
   "bugs": "https://github.com/jufuku-haijo/ts-lib-starter/issues",
   "scripts": {
     "format": "prettier --write . --ignore-unkown",
+    "build": "pnpm --filter core run build",
     "test": "vitest",
     "test:watch": "vitest -w",
     "prepublishOnly": "pnpm run build"
