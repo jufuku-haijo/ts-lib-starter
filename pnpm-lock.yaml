@@ -1,24 +1,34 @@
 lockfileVersion: 5.4
 
-specifiers:
-  '@egoist/prettier-config': ^1.0.0
-  prettier: ^2.8.1
-  tsup: ^6.5.0
-  typescript: ^4.9.4
-  vitest: ^0.25.6
+importers:
 
-devDependencies:
-  '@egoist/prettier-config': 1.0.0
-  prettier: 2.8.1
-  tsup: 6.5.0_typescript@4.9.4
-  typescript: 4.9.4
-  vitest: 0.25.6
+  .:
+    specifiers:
+      prettier: ^2.8.1
+      tsup: ^6.5.0
+      typescript: ^4.9.4
+      vitest: ^0.25.6
+    devDependencies:
+      prettier: 2.8.1
+      tsup: 6.5.0_typescript@4.9.4
+      typescript: 4.9.4
+      vitest: 0.25.6
+
+  packages/core:
+    specifiers:
+      '@types/node': ^18.11.18
+      tsup: ^6.5.0
+    devDependencies:
+      '@types/node': 18.11.18
+      tsup: 6.5.0
+
+  packages/playground:
+    specifiers:
+      core: workspace:*
+    devDependencies:
+      core: link:../core
 
 packages:
-
-  /@egoist/prettier-config/1.0.0:
-    resolution: {integrity: sha512-D1Tp9Jv4aVoEo3cOAO966gFCI0wx/1lZ6sEHX8uMAfyVxuxD2+knGxhfGlb/FNLxWV3ifSI5hOmB/zFfsi7Rzw==}
-    dev: true
 
   /@esbuild/android-arm/0.15.18:
     resolution: {integrity: sha512-5GT+kcs2WVGjVs7+boataCkO5Fg0y4kCjzkB5bAip7H4jfnOS3dA6KPiww9W1OEKTKeAcUVhdZGvgI65OXmUnw==}
@@ -71,6 +81,10 @@ packages:
 
   /@types/node/18.11.12:
     resolution: {integrity: sha512-FgD3NtTAKvyMmD44T07zz2fEf+OKwutgBCEVM8GcvMGVGaDktiLNTDvPwC/LUe3PinMW+X6CuLOF2Ui1mAlSXg==}
+    dev: true
+
+  /@types/node/18.11.18:
+    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
     dev: true
 
   /acorn-walk/8.2.0:
@@ -939,6 +953,41 @@ packages:
 
   /ts-interface-checker/0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
+    dev: true
+
+  /tsup/6.5.0:
+    resolution: {integrity: sha512-36u82r7rYqRHFkD15R20Cd4ercPkbYmuvRkz3Q1LCm5BsiFNUgpo36zbjVhCOgvjyxNBWNKHsaD5Rl8SykfzNA==}
+    engines: {node: '>=14'}
+    hasBin: true
+    peerDependencies:
+      '@swc/core': ^1
+      postcss: ^8.4.12
+      typescript: ^4.1.0
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      postcss:
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      bundle-require: 3.1.2_esbuild@0.15.18
+      cac: 6.7.14
+      chokidar: 3.5.3
+      debug: 4.3.4
+      esbuild: 0.15.18
+      execa: 5.1.1
+      globby: 11.1.0
+      joycon: 3.1.1
+      postcss-load-config: 3.1.4
+      resolve-from: 5.0.0
+      rollup: 3.7.2
+      source-map: 0.8.0-beta.0
+      sucrase: 3.29.0
+      tree-kill: 1.2.2
+    transitivePeerDependencies:
+      - supports-color
+      - ts-node
     dev: true
 
   /tsup/6.5.0_typescript@4.9.4:

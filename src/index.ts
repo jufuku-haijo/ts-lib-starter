@@ -1,1 +1,0 @@
-export const foo = (n: number) => n
