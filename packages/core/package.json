@@ -6,6 +6,10 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "private": true,
+  "keywords": [],
+  "files": [
+    "dist"
+  ],
   "exports": {
     "require": "./dist/index.js",
     "import": "./dist/index.mjs"
@@ -23,7 +27,6 @@
     "url": "git@github.com:jufuku-haijo/ts-lib-starter.git"
   },
   "bugs": "https://github.com/jufuku-haijo/ts-lib-starter/issues",
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
