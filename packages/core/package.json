@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "private": true,
   "exports": {
     "require": "./dist/index.js",
     "import": "./dist/index.mjs"
@@ -16,6 +17,12 @@
     "build-fast": "tsup index.ts bin/index.ts --format cjs,esm --dts",
     "build": "pnpm run build-fast -- --dts-resolve"
   },
+  "homepage": "https://github.com/jufuku-haijo/ts-lib-starter",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jufuku-haijo/ts-lib-starter.git"
+  },
+  "bugs": "https://github.com/jufuku-haijo/ts-lib-starter/issues",
   "keywords": [],
   "author": "",
   "license": "ISC",
